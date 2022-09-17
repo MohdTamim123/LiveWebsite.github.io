@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: cursive;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: beige;
+            /* background-image: url("Image/alex-shutin-kKvQJ6rK6S4-unsplash.jpg"); */
+            margin: 0px;
+            /* background-size: cover; */
+        }
+
+        .container {
+            background-color: white;
+            width: 1000px;
+            margin: auto;
+            /* height: 5000px; */
+        }
+
+        .navbar {
+            width: 1000px;
+            background-color: orange;
+            margin: auto;
+            /* border: 2px solid red; */
+            border-radius: 30px;
+            position: sticky;
+            top: 2px;
+            font-family: Arial, Helvetica, sans-serif;
+            /* border: 4px solid black; */
+        }
+
+        .navbar ul {
+            overflow: auto;
+            margin: 0px;
+            /* border: 2px solid red; */
+        }
+
+        .navbar li {
+            list-style: none;
+            float: left;
+            padding: 15px 20px;
+            /* border: 2px solid red; */
+            /* display: inline-block; */
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 30px;
+            /* padding-bottom: 2px; */
+            /* display: block; */
+        }
+
+
+        .navbar li a.active {
+            /* background-color: black; */
+            /* text-decoration: underline; */
+            background-color: rgb(150, 231, 231);
+            color: black;
+        }
+
+        .navbar li a:hover {
+            color: black;
+            background-color: rgb(150, 231, 231);
+        }
+
+        .search {
+            float: right;
+            padding: 13px 20px;
+            /* border: 2px solid red; */
+        }
+
+        .search input {
+            border: 2px solid black;
+            border-radius: 20px;
+            padding: 2px;
+        }
+
+        .backgroundImage {
+            width: 1000px;
+            margin: auto;
+        }
+
+        .content-holder img {
+            width: 100%;
+            /* margin-top: 100px; */
+            /* border-top-left-radius: 30px;
+            border-top-right-radius: 30px; */
+            margin-top: 2px;
+            height: 673.46px;
+
+        }
+
+        /* #firstPara {
+            border: 2px solid red;
+            width: 33%;
+            display: inline-block;
+            float: left;
+        }
+
+        #secondPara {
+            border: 2px solid red;
+            width: 33%;
+        }
+
+        #thirdPara {
+            border: 2px solid red;
+            width: 33%;
+        } */
+
+        .box {
+            /* border: 2px solid red; */
+            width: 32%;
+            display: inline-block;
+            padding: 5px;
+            border: 4px solid black;
+            border-radius: 20px;
+            margin-bottom: 5px;
+            background-color: rgb(150, 231, 231);
+        }
+
+        .content {
+            position: absolute;
+            top: 100px;
+            width: 800px;
+        }
+
+        .content-holder {
+            width: 1000px;
+            margin: 0px auto;
+            height: 673.46px;
+            /* position: relative; */
+        }
+
+        .sidebar {
+            float: right;
+            position: absolute;
+            top: 300px;
+            right: 260px;
+            background-color: orange;
+            width: 210px;
+            border: 4px solid black;
+            border-radius: 20px;
+            padding: 20px;
+            
+            cursor: pointer;
+            /* height: 500px; */
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: black;
+            /* text-align: center; */
+        }
+
+        .sidebar a:hover {
+            color: white;
+        }
+
+        .sidebar ul {
+            padding: 0px;
+        }
+        .sidebar li {
+            list-style: none;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .footer { 
+            width: 1000px;
+            margin: auto;
+            background-color: orange;
+            color: black;
+            border: 4px solid black;
+            margin-top: 2px;
+        }
+
+        .sub-footer{
+            width: 25%;
+            display: inline-block;
+            float: left;
+        }
+
+        .sub-footer a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .sub-footer a:hover {
+            color: white ;
+        }
+
+        .sub-footer li {
+            list-style: none;
+            /* text-align: center; */
+        }
+
+        .footer-item {
+            padding: 20px;
+            margin-top: 70px;
+        }
+
+        .footer-item li {
+            margin: 5px;
+        }
+        .copyright {
+            /* background-color: rgb(150, 231, 231); */
+            background-color: black;
+            color: white;
+            /* margin: 20px; */
+            width: 1000px;
+            margin: auto;
+            padding: 5px;
+            text-align: center;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .clear { 
+            clear: both;
+        }
+
+        .float-contact {
+            position: fixed;
+            bottom: 2px;
+            right: 260px;
+        }
+
+        .button {
+            border: 2px solid black;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .box:hover {
+            background-color: orange;
+        }
+
+        /* .drop {
+            display: none;
+            position: absolute; 
+            margin: 0px;
+            padding: 0px;
+        } 
+
+        .drop li {
+            float: left;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="float-contact">
+        <a href="#"><button class="button">Feedback</button></a>
+    </div>
+    <div class="container">
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <!-- <ul class="drop">
+                        <li><a href="#">Service 1</a></li>
+                        <li><a href="#">Service 2</a></li>
+                        <li><a href="#">Service 3</a></li>
+                    </ul> -->
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <div class="search">
+                        <input type="text" name="search" id="search" placeholder="Search">
+                    </div>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <section class="content-holder">
+        <img src="/Website_1/Image/matthew-huang-ZPZUG6IoILY-unsplash.jpg" alt="">
+        <article class="content">
+            <div id="firstPara" class="box">
+                <h2>Nature</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias totam voluptas odio eligendi a
+                    similique voluptates earum libero, nostrum recusandae fugit corrupti assumenda fuga quam nam
+                    consequatur, rerum voluptate.</p>
+            </div>
+            <div id="secondPara" class="box">
+                <h2>Nature</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias totam voluptas odio eligendi a
+                    similique voluptates earum libero, nostrum recusandae fugit corrupti assumenda fuga quam nam
+                    consequatur, rerum voluptate.</p>
+            </div>
+            <div id="thirdPara" class="box">
+                <h2>Nature</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias totam voluptas odio eligendi a
+                    similique voluptates earum libero, nostrum recusandae fugit corrupti assumenda fuga quam nam
+                    consequatur, rerum voluptate.</p>
+            </div>
+            <div id="fourthPara" class="box">
+                <h2>Nature</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias totam voluptas odio eligendi a
+                    similique voluptates earum libero, nostrum recusandae fugit corrupti assumenda fuga quam nam
+                    consequatur, rerum voluptate.</p>
+            </div>
+            <div id="fifthPara" class="box">
+                <h2>Nature</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias totam voluptas odio eligendi a
+                    similique voluptates earum libero, nostrum recusandae fugit corrupti assumenda fuga quam nam
+                    consequatur, rerum voluptate.</p>
+            </div>
+            <div id="sixthPara" class="box">
+                <h2>Nature</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias totam voluptas odio eligendi a
+                    similique voluptates earum libero, nostrum recusandae fugit corrupti assumenda fuga quam nam
+                    consequatur, rerum voluptate.</p>
+            </div>
+        </article>
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </aside>
+    </section>
+    <footer class="footer">
+        <div class="sub-footer">
+            <div class="footer-item">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </div>
+        </div>
+        <div class="sub-footer">
+            <div class="footer-item">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </div>
+        </div>
+        <div class="sub-footer">
+            <div class="footer-item">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </div>
+        </div>
+        <address class="sub-footer">
+            <h2>Google</h2>
+            <p>B-503, ASMITA ELEGANCE, NEAR APOLLO PHARMACY, MIRA ROAD EAST, THANE.</p>
+            <p>Email : <a href="mailto:mohdtamim5035323@gmail.com">mohdtamim5035323@gmail.com</a></p>
+            <p>Mobile : <a href="tel:+919369966943">+919369966943</a></p>
+        </address>
+        <div class="clear"></div>
+
+        
+    </footer>
+    <div class="copyright">
+        <p>Copyright &copy;2022. All Right Reserved.</p>
+    </div>
+</body>
+</html>
